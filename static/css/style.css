@@ -1,0 +1,167 @@
+/* 全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #111;
+  background-color: #fff;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* 标题区 */
+.hero {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.hero h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #444;
+  margin: 0 auto;
+}
+
+/* 按钮组 */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 40px;
+  transition: 0.2s;
+  border: 1px solid transparent;
+}
+
+/* PDF 按钮样式 */
+.btn-primary {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+/* Code 按钮样式（已修改为与 PDF 一致的黑色） */
+.btn-secondary {
+  background-color: #000; /* 背景改为黑色 */
+  color: #fff;            /* 文字改为白色 */
+  border-color: #000;     /* 边框统一为黑色 */
+}
+
+.btn-secondary:hover {
+  background-color: #333; /* 悬停时变亮一点 */
+  transform: translateY(-2px);
+}
+
+/* 普通章节 */
+.section {
+  margin: 3rem 0;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.section p {
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: justify;      /* 👈 加上这一行 */
+  hyphens: auto;            /* 👈 加上这一行 */
+  -webkit-hyphens: auto;    /* 👈 加上这一行 */
+}
+
+/* 主图样式优化 */
+.main-img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+  display: block;
+}
+
+
+.abstract-text {
+  text-align: justify;      /* 核心：两端对齐 */
+  hyphens: auto;            /* 允许断字，防止间距过大 */
+  -webkit-hyphens: auto;    /* 兼容 Safari/Chrome */
+}
+
+
+
+/* 视频响应式容器 (16:9 宽高比) */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #000; /* 加载时的背景色 */
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 页脚 */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 1px solid #eee;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* 手机适配 */
+@media (max-width: 640px) {
+  main {
+    padding: 1rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero h2 {
+    font-size: 1rem;
+  }
+  .section h2 {
+    font-size: 1.4rem;
+  }
+}
