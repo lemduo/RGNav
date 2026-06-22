@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PAPlanner</title>
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+  <main>
+    <!-- 1. 标题与摘要区 -->
+    <section class="hero">
+      <h1>PAPlanner</h1>
+      <h2>Progress-Aware Planner for Embodiment-Agnostic Vision-and-Language Navigation</h2>
+
+      <div class="buttons">
+        <!-- 修改：移除了 download 属性，添加了 target="_blank" 以便在新标签页打开 -->
+        <!-- 请确保 static/pdfs/PAPlanner.pdf 路径下的文件存在 -->
+        <a href="static/pdfs/PAPlanner.pdf" class="btn btn-primary" target="_blank">📄 Paper PDF</a>
+        
+        <!-- 修改：指向你的 GitHub 仓库 -->
+        <a href="https://github.com/RitonLi/PAPlanner_Code" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">💻 Code</a>
+      </div>
+    </section>
+
+    <!-- 2. 摘要区 -->
+    <section class="section">
+      <h2>Abstract</h2>
+      <p class="abstract-text">
+        Vision-and-Language Navigation in Continuous Environments (VLN-CE) has achieved remarkable progress with the integration of Vision-Language Models (VLMs). However, VLM-based navigation presents a key challenge when following long-horizon instructions, where reliance on implicit temporal reasoning often leads to unreliable progress estimation. To address this limitation, we propose PAPlanner, a progress-aware planning framework for VLN-CE. We first formulate navigation as a progress-aware planning problem where each instruction is decomposed into ordered sub-instructions. Then, the VLM explicitly tracks their execution progress while predicting navigation commands within a structured action space, significantly enhancing reasoning stability. For safe deployment, these commands are finally executed by a locomotion policy that combines real-time traversability estimation with classical local planning. By decoupling semantic reasoning from motion execution, PAPlanner achieves embodiment-agnostic deployment and enables safe navigation without retraining. Extensive experiments on R2R-CE and RxR-CE benchmarks, as well as real-world deployments on humanoid, quadruped, and wheeled robots, demonstrate that PAPlanner achieves superior generalization in unseen environments and robust sim-to-real transfer.
+      </p>
+    </section>
+
+    <!-- 3. 框图区 -->
+    <section class="section">
+      <h2>Pipeline</h2>
+      <!-- 确保图片文件名与你 static/images/ 目录下的文件名完全一致 (pipeline.jpg) -->
+      <img class="main-img" src="static/images/pipeline.jpg" alt="PAPlanner overview" />
+    </section>
+
+    <!-- 4. 视频区 -->
+    <section class="section">
+      <h2>Supplementary Video</h2>
+      <div class="video-wrapper">
+        <!-- ⚠️ 关键修改：请将 "YOUR_ACTUAL_VIDEO_ID" 替换为你 YouTube 视频的真实 ID -->
+        <!-- 例如：如果链接是 https://www.youtube.com/watch?v=dQw4w9WgXcQ，则填入 dQw4w9WgXcQ -->
+        <iframe
+          src="https://www.youtube.com/embed/Iv9MeXWgL3A"
+          title="PAPlanner video"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 VSISLab</p>
+  </footer>
+</body>
+</html>
